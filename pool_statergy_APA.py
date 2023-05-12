@@ -1,3 +1,13 @@
+"""
+This script will help to build a strategy of possible combinations of players for APA Pool team
+1. Run the script
+2. Press 8 or 9 to select pool format from the main menu
+3. Press number to select player
+4. Press q to save and return to main menu
+5. Press r to change previously selected player
+
+"""
+
 import numpy as np
 import os
 from colorama import Fore
@@ -185,18 +195,11 @@ def played(played):
 team_9ball = {'Howard': 7, 'Bobby': 6, 'Renee': 5, 'Kat': 4, 'Suhas': 4, 'Ellen': 3, 'Pam': 2, 'Meghan': 1}
 team_8ball = {'Howard': 6, 'Bobby': 6, 'Renee': 5, 'Kat': 4, 'Suhas': 4, 'Ellen': 4, 'Pam': 3, 'Meghan': 2}
 
-"""
-Press 8 or 9 to select pool format
-Press number to select player
-Press q to quit and save
-Press r to return to the previous menu
-"""
-
 # Run all possible options with skill levels and max points
 result_9 = allCombinations(team=team_9ball, maxpoints=23)
 result_8 = allCombinations(team=team_8ball, maxpoints=23)
 
-# Order memory
+# Memory of the order
 eight_order = []
 nine_order = []
 
